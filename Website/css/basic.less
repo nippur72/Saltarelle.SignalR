@@ -1,0 +1,91 @@
+@header-background: #586893;
+@header-color: white;
+@header-link-color: #faf9d3;
+
+@wrapper-background: white;
+@wrapper-color: black;
+
+@external-color: silver;
+
+@footer-background: #414d62;
+@footer-color: @header-color;
+@footer-link-color: @header-link-color;
+
+/*
+// disables selection
+*:not(input):not(textarea):not(button):not(a) {   
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    cursor: default;
+}
+*/
+
+// required by ui-bootrap
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.text2 {
+   color: #ffed26;
+}
+
+.text3 {
+   color: #bfbfbf;
+}
+
+body {
+   font-family: Monaco, "Lucida Console", monospace;
+   font-family: "Consolas", monospace;
+   font-family: "Segoe UI", Helvetica, Arial, sans-serif;		
+   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;      
+	margin: 0;
+   padding: 0;   
+   background-color: @external-color;
+}
+
+header {
+    margin: 0;
+    border: 0;
+    background-color: @header-background;
+    color: @header-color;
+    padding: 5px;
+}
+
+footer {
+    background-color: @footer-background;
+    color: @footer-color;
+    margin: 0;
+    padding: 5px;
+    border: 0;    
+}
+
+#wrapper {
+    background-color: @wrapper-background;
+    color: @wrapper-color;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+}
+
+#mainview {
+    padding: 5px;
+    min-height: 300px;
+}
+
+table.simpletable {
+	border: solid 1px black;
+	border-collapse: collapse;		
+
+   thead tr td {
+   	background-color: silver;
+	   color: white;
+   }
+
+   tbody tr td {
+	   border: solid 1px silver;	
+   }
+}
+

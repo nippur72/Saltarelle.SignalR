@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Saltarelle.AngularJS</name>
+    </assembly>
+    <members>
+        <member name="M:AngularJS.Attributes.Observe(System.String,System.Action)">
+            <summary>
+            Observe an interpolated attribute. The observer will never be called, if given attribute is not interpolated.
+            </summary>
+        </member>
+        <!-- Commento XML in formato non corretto ignorato per il membro "T:AngularJS.Injectable" -->
+        <member name="F:AngularJS.Event.TargetScope">
+            <summary>
+            the scope on which the event was $emit-ed or $broadcast-ed.
+            </summary>      
+        </member>
+        <member name="F:AngularJS.Event.CurrentScope">
+            <summary>
+            the current scope which is handling the event.
+            </summary>  
+        </member>
+        <member name="F:AngularJS.Event.Name">
+            <summary>
+            Name of the event.
+            </summary>  
+        </member>
+        <member name="F:AngularJS.Event.StopPropagation">
+            <summary>
+            calling stopPropagation function will cancel further event propagation (available only for events that were $emit-ed).
+            </summary>  
+        </member>
+        <member name="F:AngularJS.Event.PreventDefault">
+            <summary>
+            calling preventDefault sets defaultPrevented flag to true.
+            </summary>  
+        </member>
+        <member name="F:AngularJS.Event.DefaultPrevented">
+            <summary>
+            true if preventDefault was called.   
+            </summary>  
+        </member>
+        <member name="M:AngularJS.Timeout.Cancel(AngularJS.Promise)">
+            <summary>
+            Cancels a task associated with the promise. As a result of this, the promise will be resolved with a rejection.
+            Returns true if the task hasn't executed yet and was successfully canceled.
+            </summary>
+        </member>
+        <member name="T:AngularJS.ScopeModes">
+            <summary>
+            Defines how the scope is associated with the directive
+            </summary>     
+        </member>
+        <member name="F:AngularJS.ScopeModes.Existing">
+            <summary>
+            No scope is created, use the existing scope
+            </summary>     
+        </member>
+        <member name="F:AngularJS.ScopeModes.New">
+            <summary>
+            A new single scope is created and shared for all instances of the same directive
+            </summary>     
+        </member>
+        <member name="F:AngularJS.ScopeModes.Isolate">
+            <summary>
+            A new isolated scope is created and associated to the instance of the directive
+            </summary>     
+        </member>
+        <member name="F:AngularJS.BindingStrategies.Unidirectional">
+            <summary>
+            Binds attribute to scope variable (unidirectionally)
+            </summary>     
+        </member>
+        <member name="F:AngularJS.BindingStrategies.Bidirectional">
+            <summary>
+            Binds attribute to and from scope variable (bidirectionally)
+            </summary>     
+        </member>
+        <member name="F:AngularJS.BindingStrategies.AsFunction">
+            <summary>
+            Scope variable is a function that evaluates the attribute
+            </summary>     
+        </member>
+        <member name="M:AngularJS.ScopeBindings.#ctor(System.String)">
+            <summary>
+            Binds attribute to scope variable (unidirectionally)
+            </summary>     
+        </member>
+        <member name="M:AngularJS.ScopeBindings.#ctor(System.String,System.String)">
+            <summary>
+            Binds attribute to scope variable (unidirectionally)
+            </summary>     
+        </member>
+        <member name="F:AngularJS.DirectiveDefinitionHelper.Restrict">
+            <summary>
+            Target of DOM the directive applies (default=restrict to attribute only)
+            </summary>     
+        </member>
+        <member name="F:AngularJS.DirectiveDefinitionHelper.Priority">
+            <summary>
+            The priority of compilation of the directive. 
+            Directive with higher priority are compiled first. 
+            The default priority is 0.
+            </summary>     
+        </member>
+        <member name="F:AngularJS.DirectiveDefinitionHelper.Terminal">
+            <summary>
+            If set to true then the current priority will be the last set of directives which will execute 
+            (any directives at the current priority will still execute as the order of execution on same priority is undefined).
+            </summary>     
+        </member>
+        <member name="F:AngularJS.DirectiveDefinitionHelper.Template">
+            <summary>
+            Template HTML string that forms the directive body
+            </summary>     
+        </member>
+        <member name="F:AngularJS.DirectiveDefinitionHelper.TemplateUrl">
+            <summary>
+            Url of the template HTML file used for the directive body
+            </summary>     
+        </member>
+        <member name="F:AngularJS.DirectiveDefinitionHelper.Replace">
+            <summary>
+            specify where the template should be inserted. Defaults to false.
+            true - the template will replace the current element.
+            false - the template will replace the contents of the current element.
+            </summary>     
+        </member>
+        <member name="F:AngularJS.DirectiveDefinitionHelper.Transclude">
+            <summary>
+            If true, specify that the original DOM content within the directive will be TRANSferred and inCLUDED 
+            in the directive template where the <ng-transclude/> directive is placed.
+            </summary>     
+        </member>
+        <member name="F:AngularJS.DirectiveDefinitionHelper.ScopeMode">
+            <summary>
+            Defines how the scope is associated with the directive
+            </summary>     
+        </member>
+        <member name="M:AngularJS.DirectiveDefinitionHelper.Controller``1">
+            <summary>
+            A controller that is instantiated before the pre-linking phase and it is shared with other directives (see require attribute). 
+            This allows the directives to communicate with each other and augment each other's behavior. 
+            The controller is injectable (and supports bracket notation) with the following locals: $scope, $element, $attrs, $transclude
+            </summary>
+        </member>
+        <member name="F:AngularJS.DirectiveDefinitionHelper.ControllerAs">
+            <summary>
+            "controller as" syntax alias for the directive controller
+            </summary>
+        </member>
+        <member name="F:AngularJS.DirectiveDefinitionHelper.Compile">
+            <summary>
+            A compile function form manipulating the DOM. It may return an object with { pre, post} linking functions
+            </summary>
+        </member>
+        <member name="F:AngularJS.DirectiveDefinitionHelper.Link">
+            <summary>
+            Link function 
+            </summary>
+        </member>
+        <member name="M:AngularJS.DirectiveDefinitionHelper.RequireDirective(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Require another directive and inject its controller as the fourth argument to the linking function. 
+            <param name="ControllerName"></param>
+            <param name="LookParent">Locate the required controller by searching the element's parents. Throw an error if not found.</param>
+            <param name="Optional">Attempt to locate the required controller or pass null to the link fn if not found.</param>
+            </summary>     
+        </member>
+        <member name="M:AngularJS.DirectiveDefinitionHelper.BindAttribute(System.String)">
+            <summary>
+            Binds attribute to scope variable (unidirectionally)
+            </summary>     
+        </member>
+        <member name="M:AngularJS.DirectiveDefinitionHelper.BindAttribute(System.String,System.String)">
+            <summary>
+            Binds attribute to scope variable (unidirectionally)
+            </summary>     
+        </member>
+        <member name="M:AngularJS.DirectiveDefinitionHelper.BindAttribute(System.String,AngularJS.BindingStrategies)">
+            <summary>
+            Binds attribute to scope variable
+            </summary>     
+        </member>
+        <member name="M:AngularJS.DirectiveDefinitionHelper.BindAttribute(System.String,AngularJS.BindingStrategies,System.String)">
+            <summary>
+            Binds attribute to scope variable 
+            </summary>     
+        </member>
+        <member name="M:AngularJS.Location.Replace">
+            <summary>
+            If called, all changes to $location during current $digest will be replacing current history record, instead of adding new one.
+            </summary>
+        </member>
+        <member name="P:AngularJS.Location.AbsUrl">
+            <summary>
+            Returns full url representation with all segments encoded according to rules specified in RFC 3986.
+            </summary>
+        </member>
+        <member name="P:AngularJS.Location.Hash">
+            <summary>
+            Sets or returns the hash fragment
+            </summary>
+        </member>
+        <member name="P:AngularJS.Location.Host">
+            <summary>
+            Returns host of current url.
+            </summary>
+        </member>
+        <member name="P:AngularJS.Location.Path">
+            <summary>
+            Sets or returns path of current url 
+            </summary>
+        </member>
+        <member name="P:AngularJS.Location.Port">
+            <summary>
+            Returns port of current url.
+            </summary>
+        </member>
+        <member name="P:AngularJS.Location.Protocol">
+            <summary>
+            Returns protocol of current url.
+            </summary>
+        </member>
+        <member name="P:AngularJS.Location.Search">
+            <summary>
+            Sets or returns path of current url 
+            </summary>
+        </member>
+        <member name="P:AngularJS.Location.Url">
+            <summary>
+            Sets or returns url
+            </summary>
+        </member>
+        <member name="M:AngularJS.Scope.Apply">
+            <summary>
+            Executes an expression in angular from outside of the angular framework
+            </summary>      
+        </member>
+        <member name="M:AngularJS.Scope.Apply``1(System.String)">
+            <summary>
+            Executes an expression in angular from outside of the angular framework
+            </summary>      
+        </member>
+        <member name="M:AngularJS.Scope.Apply``1(System.Func{``0,AngularJS.Scope})">
+            <summary>
+            Executes an expression in angular from outside of the angular framework
+            </summary>      
+        </member>
+        <member name="M:AngularJS.Scope.Broadcast(System.String,System.Object[])">
+            <summary>
+            Dispatches an event name downwards to all child scopes (and their children) notifying the registered listeners.
+            </summary>            
+        </member>
+        <member name="M:AngularJS.Scope.Destroy">
+            <summary>
+            Removes the current scope (and all of its children) from the parent scope.
+            </summary>                  
+        </member>
+        <member name="M:AngularJS.Scope.Digest">
+            <summary>
+            Processes all of the watchers of the current scope and its children.
+            </summary>                  
+        </member>
+        <member name="M:AngularJS.Scope.Emit(System.String,System.Object[])">
+            <summary>
+            Dispatches an event name upwards through the scope hierarchy notifying the registered listeners.
+            </summary>            
+        </member>
+        <member name="M:AngularJS.Scope.Eval``1(System.String)">
+            <summary>
+            Executes the expression on the current scope returning the result.
+            </summary>      
+        </member>
+        <member name="M:AngularJS.Scope.Eval``1(System.Func{``0,AngularJS.Scope})">
+            <summary>
+            Executes the expression on the current scope returning the result.
+            </summary>      
+        </member>
+        <member name="M:AngularJS.Scope.EvalAsync``1(System.String)">
+            <summary>
+            Executes the expression on the current scope at a later point in time.
+            </summary>      
+        </member>
+        <member name="M:AngularJS.Scope.EvalAsync``1(System.Func{``0,AngularJS.Scope})">
+            <summary>
+            Executes the expression on the current scope at a later point in time.
+            </summary>      
+        </member>
+        <member name="M:AngularJS.Scope.New(System.Boolean)">
+            <summary>
+            Creates a new child scope.
+            </summary>      
+        </member>
+        <member name="M:AngularJS.Scope.On(System.String,System.Action{AngularJS.Event})">
+            <summary>
+            Listens on events of a given type.
+            </summary>      
+        </member>
+        <member name="P:AngularJS.Module.Name">
+            <summary>
+            Name of the module
+            </summary>
+        </member>
+        <member name="P:AngularJS.Module.Requires">
+            <summary>
+            List of module names which must be loaded before this module
+            </summary>      
+        </member>
+        <member name="M:AngularJS.Angular.Module(System.String)">
+            <summary>
+            Retrieves an already existing module by its name
+            </summary>      
+        </member>
+    </members>
+</doc>

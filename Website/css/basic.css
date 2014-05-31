@@ -1,0 +1,71 @@
+﻿/*
+// disables selection
+*:not(input):not(textarea):not(button):not(a) {   
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    cursor: default;
+}
+*/
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+  cursor: pointer;
+}
+.text2 {
+  color: #ffed26;
+}
+.text3 {
+  color: #bfbfbf;
+}
+body {
+  font-family: Monaco, "Lucida Console", monospace;
+  font-family: "Consolas", monospace;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #c0c0c0;
+}
+header {
+  margin: 0;
+  border: 0;
+  background-color: #586893;
+  color: #ffffff;
+  padding: 5px;
+}
+footer {
+  background-color: #414d62;
+  color: #ffffff;
+  margin: 0;
+  padding: 5px;
+  border: 0;
+}
+#wrapper {
+  background-color: #ffffff;
+  color: #000000;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+}
+#mainview {
+  padding: 5px;
+  min-height: 300px;
+}
+table.simpletable {
+  border: solid 1px black;
+  border-collapse: collapse;
+}
+table.simpletable thead tr td {
+  background-color: silver;
+  color: white;
+}
+table.simpletable tbody tr td {
+  border: solid 1px silver;
+}
+/*# sourceMappingURL=basic.css.map */
