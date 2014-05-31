@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 
-namespace Portento.Server
+namespace Website
 {
    public class Global : System.Web.HttpApplication
    {

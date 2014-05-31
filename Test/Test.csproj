@@ -59,9 +59,6 @@
     <Reference Include="Saltarelle.AngularJS">
       <HintPath>..\packages\Saltarelle.Angular.Cs.0.0.1\lib\Saltarelle.AngularJS.dll</HintPath>
     </Reference>
-    <Reference Include="Saltarelle.Jasmine">
-      <HintPath>..\..\GitHub\Saltarelle.Jasmine\Jasmine\bin\Debug\Saltarelle.Jasmine.dll</HintPath>
-    </Reference>
     <Reference Include="Saltarelle.jQuery">
       <HintPath>..\packages\Saltarelle.jQuery.1.10.1\lib\Saltarelle.jQuery.dll</HintPath>
     </Reference>

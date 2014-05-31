@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Portento.Server.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Website.Global" Language="C#" %>
