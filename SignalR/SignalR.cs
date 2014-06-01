@@ -18,7 +18,7 @@ namespace SignalR
    }
    
    [Imported]
-   public class ConnectionSettings 
+   public sealed class ConnectionSettings 
    {
       dynamic transport;
       dynamic callback;
