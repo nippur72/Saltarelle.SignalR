@@ -9,21 +9,26 @@ using jQueryApi;
 
 namespace SignalR
 {
+   [Imported]
    public class HubConnectionSettings
    {
       public string queryString;
       public bool logging;
       bool useDefaultPath;
    }
-
+   
+   [Imported]
    public class ConnectionSettings 
    {
       dynamic transport;
       dynamic callback;
       bool waitForPageLoad;
       bool jsonp;
+
+      [InlineCode("{}")] public ConnectionSettings() {}
    }
 
+   [Imported]
    public class SignalRStateChange 
    {
        int oldState;

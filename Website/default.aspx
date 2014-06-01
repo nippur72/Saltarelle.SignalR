@@ -41,7 +41,7 @@
       <header>
          <h1>Saltarelle.SignalR sample "chat" app</h1>
       </header>
-      <p>Note: to see it working, open two or more browser windows pointing this URL.</p>
+      <p>Note: to see it working, open two or more browser windows pointing this page's URL.</p>
       <p>
          Your name: <input ng-model="ctrl.username"/>
          Message: <input ng-model="ctrl.message"/>

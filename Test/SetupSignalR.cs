@@ -17,8 +17,8 @@ public class SignalRConnections
 
    public SignalRConnections()
    {
-      connection = hubConnection.connection();      
-   
+      connection = hubConnection.connection();              
+
       connection.error((error)=>
       {
          throw new Exception("Signalr error "+error);
