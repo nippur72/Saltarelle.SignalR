@@ -49,9 +49,18 @@ namespace SignalR
       public void send(string data) {}
       public void stop() {}
       public void stop(bool async) {}
-      public void stop(bool async, bool notifyServer) {}
+      public void stop(bool async, bool notifyServer) {}    
 
-      public void error(Action<string> errorFunction) { }
+      [IntrinsicProperty] public bool logging { get; set; }
+
+      public void starting(Action handler) {  }
+      public void received(Action<object> handler) {  }
+      public void error(Action<string> handler) {  }
+      public void stateChanged(Action<SignalRStateChange> handler) {  }
+      public void disconnected(Action handler) {  }
+      public void connectionSlow(Action handler) {  }      
+      public void reconnecting(Action handler) {  }
+      public void reconnected(Action handler) {  } 
    }
 
    [Imported]
@@ -64,16 +73,6 @@ namespace SignalR
       public bool hasSubscriptions() { return false; }
       public hubProxy on<T>(string eventName, Action<T> ob) { return this; }
       public hubProxy off<T>(string eventName, Action<T> ob ) { return this; }
-      [ExpandParams] public void invoke(string methodname, params object[] parameters) {}   
-      
-      public hubProxy starting(Action handler) { return this; }
-      public hubProxy received(Action<object> handler) { return this; }
-      public hubProxy error(Action<string> handler) { return this; }
-      public hubProxy stateChanged(Action<SignalRStateChange> handler) { return this; }
-      public hubProxy disconnected(Action handler) { return this; }
-      public hubProxy connectionSlow(Action handler) { return this; }
-      public hubProxy sending(Action handler) { return this; }
-      public hubProxy reconnecting(Action handler) { return this; }
-      public hubProxy reconnected(Action handler) { return this; } 
+      [ExpandParams] public void invoke(string methodname, params object[] parameters) {}         
    }   
 }
